@@ -21,5 +21,15 @@
 - _Firebase FireStore_
 
 ### Application Todos
-[ ] Create Express Server
-[ ] Define Environment Variables 
+[x] Create Express Server
+[x] Define Environment Variables
+[x] Connect React With Express
+[x] Successfully fetch express generated api data using react app
+[] Implement a redirect to view all users after creating new user
+[] Add method to update a current user
+[] Add method to delete a specified user
+[] Create view component that neatly displays user json data
+[] Create a form component for posting a new user to the users model
+[] Include a search component to search for a specific user
+[] Research authorization implementation for database integration
+[] Translate working api schema to database of choice
