@@ -14,14 +14,12 @@ const app = express();
     optionsSuccessStatus: 200
 } */
 
-// allows cors
-app.use(cors());
 
-// Express Body Parser Middleware
-app.use(express.json());
 
-// Form Data Body Parser Middleware
-app.use(express.urlencoded({extended: false}));
+app.use(cors()); // allows cors
+app.use(express.urlencoded({extended: false})); // Form Data Body Parser Middleware
+app.use(express.json()); // Express Body Parser Middleware
+
 
 
 app.get('/', (req, res) => {
@@ -36,11 +34,21 @@ app.get('/api/users/:id', (req, res) => {
     // this route specifies a specific user
     const user = users.filter((user) => user.id === parseInt(req.params.id));
     res.json(user);
-})
+});
 
-app.post('/', (req, res) => {
-    console.log(req.body);
-    res.send("POST RECEIVED")
+app.post('/api/users/new', (req, res) => {
+    const lastID = users.length;
+    const newUser = {
+        id: lastID + 1,
+        name: req.query.name,
+        occupation: req.query.occupation,
+        email: req.query.email
+    };
+
+    users.push(newUser);
+
+    res.status(201);
+    res.json({ msg: 'new user added!', createdUser: newUser})
 })
 
 const PORT = process.env.PORT;

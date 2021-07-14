@@ -1,21 +1,21 @@
 const Users = [
     {
         id: 1,
-        name: 'John Cena',
-        occupation: 'Wrestler',
-        email: 'john@gmail.com'
+        name: 'Bumble Bee',
+        occupation: 'Autobot',
+        email: 'bumble@transformer.com'
     },
     {
         id: 2,
         name: 'Optimus Prime',
         occupation: 'Autobot',
-        email: 'optimus@gmail.com'
+        email: 'optimus@transformer.com'
     },
     {
         id: 3,
         name: 'Starscream',
         occupation: 'Decepticon',
-        email: 'star@gmail.com'
+        email: 'star@transformer.com'
     },
 ];
 
