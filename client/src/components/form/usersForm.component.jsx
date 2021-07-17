@@ -1,9 +1,11 @@
 import FormButton from "../button/formButton.component";
 
+import './usersForm.style.css';
+
 const UserForm = () => {
     return (
         <div>
-            <form action='http://localhost:5000/api/users' method='POST'>
+            <form action='http://localhost:5000/api/users' method='POST' className='form-container'>
                 <label htmlFor='userName'>User Name </label>
                 <input id='userName' type='text' name='name' placeholder='Name' required />
 
